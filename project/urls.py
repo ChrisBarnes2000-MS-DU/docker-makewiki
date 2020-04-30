@@ -19,8 +19,18 @@ from django.conf import settings
 
 
 urlpatterns = [
+    # Admin Site
     path('admin/', admin.site.urls),
-    path('', include('web.urls')),
+
+    # API
+    # path('api/', include('api.urls')),
+
+    #Accounts
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
+
+    # Wiki App
+    path('', include('wiki.urls')),
 ]
 
 

@@ -1,25 +1,59 @@
-# docker-django
+# 📓 Personal Wiki
 
-Production ready Docker + Django + Bootstrap 4 starter pack.
+View the [lesson plan] that accompanies this activity.
 
-Includes the following built in support for:
+## Step 1: Follow Setup Guide
 
-- **[`django-compressor`](https://github.com/django-compressor/django-compressor)**: Django Compressor processes, combines and minifies linked and inline Javascript or CSS in a Django template into cacheable static files. Supports such as CoffeeScript, LESS, and SASS.
-- **[`django-dotenv`](https://github.com/jpadilla/django-dotenv)**: Allows `manage.py` to read environment settings stored in a `.env` file.
-- **[`django-debug-toolbar`](https://github.com/jazzband/django-debug-toolbar)**: The Django Debug Toolbar is a configurable set of panels that display various debug information about the current request/response and when clicked, display more details about the panel's content.
-- **[`djangorestframework`](https://www.django-rest-framework.org/)**: Django REST framework is a powerful and flexible toolkit for building Web APIs.
-- **[`pillow`](https://pillow.readthedocs.io/en/stable/)**: Pillow is a friendly PIL fork. PIL is the Python Imaging Library by Fredrik Lundh and Contributors.
-- **[`psycopg2-binary`](https://pypi.org/project/psycopg2-binary/)**: Stand-alone version of `psycopg2`, the most popular PostgreSQL database adapter for the Python programming language.
-- **[`whitenoise`](http://whitenoise.evans.io/en/stable/)**: With a couple of lines of config WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service. Especially useful on Heroku, OpenShift and other PaaS providers.
+ **⭐️ IMPORTANT**: Change **YOUR_GITHUB_USERNAME** before hitting `<ENTER>` on the last step.<br>**✅ EXAMPLE**: Change `git remote add https://github.com/YOUR_GITHUB_USERNAME/makewiki` to `git remote add https://github.com/droxey/makewiki` for [Dani](https://github.com/droxey/makewiki)'s version of the `makewiki` project.
 
-## Build
+1. **In your browser**, create a **[new public repository](https://github.com/new)** on GitHub called `makewiki`.
+2. **In your terminal**, navigate to the directory where you store your projects.
+3. **Paste each line below** into the terminal, *one by one*. **Hit `<Return>` after *each* line**:
 
-```bash
-docker build -t docker-django-image .
-```
+    ```bash
+    git clone https://github.com/make-school-labs/makewiki-starter makewiki
+    cd makewiki
+    rm -rf .git
+    git init
+    git remote add origin https://github.com/YOUR_GITHUB_USERNAME/makewiki
+    ```
 
-## Run
+4. **Open the `makewiki` repository folder** in your IDE.
 
-```bash
-docker run --rm --name docker-django docker-django-image
-```
+## Step 2: Link Repository in Tracker
+
+Add the link to your project in the [Course Tracker](https://make.sc/trackbew1.2).
+
+## Step 3: CRUD Page Instances (Admin Interface)
+
+1. In your terminal, run `python manage.py runserver`.
+2. Visit `http://127.0.0.1:8000/admin/` in your browser.
+3. Enter `admin` for the username and `djangopony` for the password.
+4. Click `Pages` on the left, underneath `Users` and `Groups`.
+5. Add real world data from 5 random Wikipedia articles using http://wikiroulette.co/.
+
+## Step 4: Solve the Challenges
+
+**NOTE**: Complete the challenges in all files before moving on to stretch challenges. Your grade is dependent on the completion of the challenges only.
+
+1. **REQUIRED**: Complete challenges in each of these files, in order:
+    1. `makewiki/urls.py`
+    1. `wiki/views.py`
+    1. `wiki/urls.py`
+    1. `templates/base.html`
+2. **OPTIONAL**: Move on to the stretch challenges in the code, or enhance the project using the suggestions below.
+
+**TIP**: Find all challenges by searching the project for instances of the word `CHALLENGE`. To **search all files in your project directory**, press `<Command>` + `<Shift>` + `<F>`, type `CHALLENGE`, and hit `<Return>`.
+
+## Step 5: Level Up
+
+### Suggestions
+
+- Create a beautiful user interface for your wiki. [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/) is included with this starter pack! 
+- Customize the project and continue to experiment with the codebase.
+- Make the models more sophisticated.
+- What other features can you dream up? What would look good on your portfolio? Open up a discussion with your instructor to receive personalized feedback.
+
+## Step 6: Add to Portfolio
+
+Add your `makewiki` implementation to your [Make School portfolio](https://www.makeschool.com/portfolio).
